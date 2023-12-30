@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    width: 80%;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, .5);
+    text-align: center;
+}
+
+.header {
+    font-family: cursive;
+    color: #222;
+    font-size: 2.3em;
+}
+.color-orange {
+    color: #FA7436;
+}
+.text-left {
+    text-align: left;
+}
+.justify-between {
+    display: flex;
+    justify-content: space-between;
+}
+.tabsContainer {
+    padding: 30px 0;
+    width: 100%;
+    display: flex;
+}
+ul.tabs {
+    display: flex;
+    margin: 0 auto;
+}
+
+ul.tabs li {
+    position: relative;
+    list-style: none;
+    margin: 0 15px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #555;
+}
+
+ul.tabs li::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FA7436;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+ul.tabs li:hover {
+    color: #000;
+}
+ul.tabs li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* cards */
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .cards {
+        justify-content: center;
+    }
+}
+.card {
+    width: 240px;
+    list-style: none;
+    border-radius: 4px;
+    overflow: hidden;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    transition: box-shadow .4s ease-in-out;
+}
+.card:hover {
+    box-shadow: 1px 1px 5px #999;
+}
+.card .header-img {
+    width: 100%;
+    height: 200px;
+}
+.card .card-content {
+    padding: 0 15px;
+}
+.card-item {
+    margin: 10px 0;
+}
+.location {
+    font-size: 13px;
+    font-weight: bold;
+    font-family: system-ui;
+}
+.location img {
+    margin-bottom: -2px;
+}
+.rate {
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.rate img {
+    margin-bottom: -2px;
+}
+.location-name {
+    font-family: sans-serif;
+}
+.tourDuration {
+    text-align: left;
+    color: #999;
+    font-size: 10px;
+    font-family: cursive;
+}
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.moreBtn {
+    font-size: 13px;
+    color: #999;
+    cursor: pointer;
+}
+.moreBtn img {
+    width: 8px;
+    margin-bottom: -1px;
+}
+
+.btn {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 7px 25px;
+    border: 1px solid #FA7436;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+.btn:hover {
+    background-color: #FA7436;
+    color: white;
+}
